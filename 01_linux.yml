@@ -6,6 +6,6 @@
   tasks:
     - name: Create file
       ansible.builtin.file:
-        path: /root/testfile.txt
+        path: /root/testfile2.txt
         state: touch
         mode: '0755'
