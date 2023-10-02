@@ -52,6 +52,8 @@
       ansible.builtin.debug:
         msg: httpd is not running
       when: not httpd_status.state == "started"
+      tags:
+        - config
 
     - name: Configure firewall
       ansible.posix.firewalld:
