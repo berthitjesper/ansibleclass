@@ -1,0 +1,13 @@
+---
+- name: Create Group and user
+  hosts: domaincontroller
+  vars:
+    domain: ansible.local
+
+  tasks:
+    - name: Search all computer accounts
+      microsoft.ad.object_info:
+        filter: objectClass -eq 'computer'
+        properties: '*'
+        search_scope: one_level
+        search_base: CN=Computers,DC=ansible,DC=local
