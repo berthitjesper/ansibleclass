@@ -11,3 +11,8 @@
         properties: '*'
         search_scope: one_level
         search_base: CN=Computers,DC=ansible,DC=local
+      register: computers
+
+    - name: Show Computers
+      ansible.builtin.debug:
+        msg: "{{ computers }}"
