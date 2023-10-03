@@ -15,4 +15,4 @@
 
     - name: Show Computers
       ansible.builtin.debug:
-        msg: "{{ computers.objects.CN }}"
+        msg: "{{ computers }}"
